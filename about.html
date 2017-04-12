@@ -17,9 +17,21 @@
 		</ol>
 		<h3>Example usage:</h3>
 			<p>https://secret-brushlands-95755.herokuapp.com/about</p>
+			<p>Upload file to <em>https://secret-brushlands-95755.herokuapp.com/upload</em> via post method.</p>
 		
 		<h3>Example output:</h3>
-		<p>{ "fileName": test.txt, "fileSize": "102bytes" }</p>
+		<p>{ "size": "12345" }</p>
+	</div>
+	
+	<div class="container-fluid col-lg-7 col-lg-offset-2">	
+		<form action="/upload" method="post" enctype="multipart/form-data">
+		 <div class="form-group">
+			<h3>File Input:</h3>
+			<input type="file" class="form-control-file" id="uploadFile" name="uploadFile" aria-describedby="fileHelp">	
+			<input type="submit" class="text-danger">
+			<small id="fileHelp" class="form-text">Select file to view size.</small>
+		  </div>
+		</form>
 	</div>
 	</div>
 </body>
